@@ -1,20 +1,84 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<nz-layout>
+  <nz-sider [nzWidth]='256' nzCollapsible [(nzCollapsed)]="isCollapsed" style="overflow: auto; height: 100vh; position: fixed; left: 0">
+    <div class="logo">
+      <img src="../assets/zxc.png" alt="">
+      <h1>东钱湖单车驿站</h1>
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
+      <li nz-submenu>
+        <span title><i class="anticon anticon-user"></i><span class="nav-text">订单管理</span></span>
+        <ul>
+          <li nz-menu-item>待付款</li>
+          <li nz-menu-item>待退押金</li>
+          <li nz-menu-item>虚拟订单</li>
+          <li nz-menu-item>已完成</li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-user"></i><span class="nav-text">租车套餐</span></span>
+        <ul>
+          <li nz-menu-item>套餐管理</li>
+          <li nz-menu-item>红包</li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-user"></i><span class="nav-text">基本录入</span></span>
+        <ul>
+          <li nz-menu-item>驿站</li>
+          <li nz-menu-item>推荐路线</li>
+          <li nz-menu-item>骑车注意事项</li>
+          <li nz-menu-item>发现</li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-user"></i><span class="nav-text">车辆管理</span></span>
+        <ul>
+          <li nz-menu-item>车辆录入</li>
+          <li nz-menu-item>车辆追踪</li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-user"></i><span class="nav-text">用户信息</span></span>
+        <ul>
+          <li nz-menu-item>用户列表</li>
+          <li nz-menu-item>短信通知</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout [ngStyle]="{'margin-left': isCollapsed ? '64px' : '256px'}">
+    <nz-header style="background: #fff;height:64px; position: fixed; right: 0px" [ngStyle]="{'left': isCollapsed ? '64px' : '256px'}">
+      <nz-badge [nzCount]="25"></nz-badge><i class="anticon anticon-down-circle-o"></i>
+    </nz-header>
+    <nz-content style="margin-top: 64px; padding: 5px 15px">
+      <div style="background: #eee;">
+        ...
+        <br />
+        Really
+        <br />...<br />...<br />...<br />
+        long
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />
+        content
+        ...
+        <br />
+        Really
+        <br />...<br />...<br />...<br />
+        long
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />...
+        <br />...<br />...<br />...<br />...<br />...<br />
+        content
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
