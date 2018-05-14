@@ -11,6 +11,6 @@ export class AppComponent {
 
   /** custom trigger can be TemplateRef **/
   changeTrigger(): void {
-
+   
   }
 }

@@ -8,10 +8,18 @@
       <li nz-submenu>
         <span title><i class="anticon anticon-user"></i><span class="nav-text">订单管理</span></span>
         <ul>
-          <li nz-menu-item>待付款</li>
-          <li nz-menu-item>待退押金</li>
-          <li nz-menu-item>虚拟订单</li>
-          <li nz-menu-item>已完成</li>
+          <li nz-menu-item>
+            <a routerLink="/pending-payment">待付押金<nz-badge [nzCount]="5" [nzStyle]="style1"></nz-badge></a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/pending-return-deposit">待退押金<nz-badge [nzCount]="2" [nzStyle]="style1"></nz-badge></a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/pending-completed">待完成<nz-badge [nzCount]="12" [nzStyle]="style1"></nz-badge></a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/completed">已完成</a>
+          </li>
         </ul>
       </li>
       <li nz-submenu>
@@ -48,36 +56,11 @@
   </nz-sider>
   <nz-layout [ngStyle]="{'margin-left': isCollapsed ? '64px' : '256px'}">
     <nz-header style="background: #fff;height:64px; position: fixed; right: 0px" [ngStyle]="{'left': isCollapsed ? '64px' : '256px'}">
-      <nz-badge [nzCount]="25"></nz-badge><i class="anticon anticon-down-circle-o"></i>
+      <nz-avatar class="tuxiang" [nzText]="'老王'" nzSize="large" [ngStyle]="{'background-color': '#7265e6'}"></nz-avatar>
     </nz-header>
     <nz-content style="margin-top: 64px; padding: 5px 15px">
       <div style="background: #eee;">
-        ...
-        <br />
-        Really
-        <br />...<br />...<br />...<br />
-        long
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />
-        content
-        ...
-        <br />
-        Really
-        <br />...<br />...<br />...<br />
-        long
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />...
-        <br />...<br />...<br />...<br />...<br />...<br />
-        content
+        <router-outlet></router-outlet>
       </div>
     </nz-content>
   </nz-layout>
