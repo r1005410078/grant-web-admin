@@ -1,2 +1,8 @@
-<h1>待完成订单</h1>
-<app-order-table [columns]="columns"></app-order-table> 
+<app-order-table
+  [columns]="columns"
+  [dataSource]="dataSource"
+  (onSelect)="onSelect($event)"
+  [title]="'代付押金订单'"
+  [description]="'用户没有微信或者需要修改押金的订单，需要生成二维码进行支付'"
+>
+</app-order-table>

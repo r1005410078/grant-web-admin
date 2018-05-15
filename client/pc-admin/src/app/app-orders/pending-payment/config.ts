@@ -3,11 +3,15 @@ import {Column} from '../order-table/models/column'
 
 // 待付款表格配置
 export const tableConfig: Array<Column> = [
-    new Column('用户', 'user'),
-    new Column('订单号', 'orders'),
-    new Column('开始时间', 'startTime'),
-    new Column('驿站', 'yizhang'),
-    new Column('支付方式', 'payMethod'),
-    new Column('金额', 'amount'),
-    new Column('操作', 'operation'),
+  {title: '用户', dataIndex: 'user'},
+  {title: '订单号', dataIndex: 'orders'},
+  {title: '下单时间', dataIndex: 'startTime', isShowSort: true},
+  {title: '驿站', dataIndex: 'yizhang', filter: [
+    {name: '驿站A', value: false},
+    {name: '驿站B', value: false},
+    {name: '驿站C', value: false}
+  ]},
+  {title: '支付二维码', dataIndex: 'payMethod'},
+  {title: '金额', dataIndex: 'amount'},
+  {title: '操作', dataIndex: 'operation'},
 ]

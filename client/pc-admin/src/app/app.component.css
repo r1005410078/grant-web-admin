@@ -60,3 +60,10 @@
   margin-top: 10px;
   margin-right: 0px;
 }
+
+.content {
+  margin-top: 64px;
+  padding: 5px 15px;
+  background:#fff;
+  border-top: 1px solid #eee;
+}

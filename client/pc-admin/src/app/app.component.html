@@ -58,10 +58,8 @@
     <nz-header style="background: #fff;height:64px; position: fixed; right: 0px" [ngStyle]="{'left': isCollapsed ? '64px' : '256px'}">
       <nz-avatar class="tuxiang" [nzText]="'老王'" nzSize="large" [ngStyle]="{'background-color': '#7265e6'}"></nz-avatar>
     </nz-header>
-    <nz-content style="margin-top: 64px; padding: 5px 15px">
-      <div style="background: #eee;">
-        <router-outlet></router-outlet>
-      </div>
+    <nz-content class='content'>
+      <router-outlet></router-outlet>
     </nz-content>
   </nz-layout>
 </nz-layout>

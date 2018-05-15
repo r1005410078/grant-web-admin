@@ -6,9 +6,11 @@ import { CompletedComponent } from './completed/completed.component';
 import { OrderTableComponent } from './order-table/order-table.component';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { PendingCompletedComponent } from './pending-completed/pending-completed.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
-  imports: [ CommonModule, NgZorroAntdModule.forRoot() ],
+  imports: [ FormsModule, CommonModule, NgZorroAntdModule.forRoot() ],
   declarations: [PendingPaymentComponent, PendingReturnDepositComponent, CompletedComponent, OrderTableComponent, PendingCompletedComponent],
   exports: []
 })
